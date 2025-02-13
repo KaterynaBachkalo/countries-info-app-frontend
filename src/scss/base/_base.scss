@@ -1,0 +1,75 @@
+@use "sass:map";
+
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  color: fn.get-color("dark");
+
+  background-color: fn.get-color("background-secondary");
+  height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  color: fn.get-color("current");
+  cursor: pointer;
+}
+
+.container {
+  min-width: map.get(var.$breakpoints, "x-sm");
+  max-width: map.get(var.$breakpoints, "sm");
+  padding: 20px 20px 20px 20px;
+  height: 100%;
+  margin: 0 auto;
+
+  @include mx.mq("sm") {
+    max-width: map.get(var.$breakpoints, "sm");
+  }
+
+  @include mx.mq("md") {
+    max-width: map.get(var.$breakpoints, "md");
+    padding: 40px;
+  }
+
+  @include mx.mq("lg") {
+    max-width: map.get(var.$breakpoints, "lg");
+    padding: 60px;
+  }
+}
+
+.error {
+  @extend %text;
+
+  display: block;
+
+  width: 240px;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  background-color: transparent;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(18, 20, 23, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(18, 20, 23, 0.15);
+}
+
+.body-scroll-lock {
+  overflow: hidden;
+}

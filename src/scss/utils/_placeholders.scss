@@ -1,0 +1,46 @@
+@use "mixins" as mx;
+@use "variables" as var;
+
+%title {
+  @include mx.font(28, 28, 0, 700);
+
+  @include mx.mq("md") {
+    @include mx.font(54, 54, 0, 700);
+  }
+}
+
+%sub-title {
+  @include mx.font(20, 24, 0, 500);
+
+  &:hover,
+  &:focus {
+    @include mx.font(20, 24, 0, 700);
+  }
+
+  @include mx.mq("md") {
+    @include mx.font(18, 22, 0, 500);
+
+    &:hover,
+    &:focus {
+      @include mx.font(18, 22, 0, 700);
+    }
+  }
+}
+
+%text {
+  @include mx.font(14, 16, 0, 700);
+
+  &:hover,
+  &:focus {
+    @include mx.font(14, 16, 0, 700);
+  }
+
+  @include mx.mq("md") {
+    @include mx.font(18, 22, 0, 700);
+
+    &:hover,
+    &:focus {
+      @include mx.font(18, 22, 0, 700);
+    }
+  }
+}

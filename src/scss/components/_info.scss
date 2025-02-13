@@ -1,0 +1,50 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 50px;
+}
+
+.info-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @include mx.mq("lg") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.info-title {
+  @extend %title;
+
+  text-align: center;
+
+  @include mx.mq("md") {
+    padding: 0;
+  }
+  @include mx.mq("lg") {
+    padding: 0 32px 0 31px;
+  }
+}
+
+.countryChart-container {
+  width: 100%;
+}
+
+.countryChart-title {
+  @extend %text;
+
+  margin-bottom: 20px;
+  text-align: center;
+}
