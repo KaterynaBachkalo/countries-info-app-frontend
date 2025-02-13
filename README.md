@@ -18,13 +18,11 @@ Prerequisites
 
 1. Clone the Repository
 
-   git clone https://github.com/yourusername/countries-info-app-backend.git
+   git clone https://github.com/yourusername/countries-info-app-frontend.git
 
-   cd countries-info-app-backend
+   cd countries-info-app-frontend
 
 2. Frontend Setup
-
-   cd ../frontend
 
    npm install # or yarn install
 
