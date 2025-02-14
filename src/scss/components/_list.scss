@@ -1,7 +1,7 @@
-@use "../utils/placeholders";
-@use "../utils/variables" as var;
-@use "../utils/functions" as fn;
-@use "../utils/mixins" as mx;
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
 
 .main-title {
   @extend %title;
@@ -9,10 +9,10 @@
   text-align: center;
   margin-bottom: 30px;
 
-  @include mx.mq("md") {
+  @include mx.mq('md') {
     padding: 0;
   }
-  @include mx.mq("lg") {
+  @include mx.mq('lg') {
     padding: 0 32px 0 31px;
   }
 }
@@ -31,11 +31,11 @@
     padding: 20px;
     border-radius: 30px;
 
-    background-color: fn.get-color("accent");
-    color: fn.get-color("light");
+    background-color: fn.get-color('accent');
+    color: fn.get-color('light');
   }
 
-  @include mx.mq("md") {
+  @include mx.mq('md') {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
@@ -46,8 +46,8 @@
       padding: 20px;
       border-radius: 30px;
 
-      background-color: fn.get-color("accent");
-      color: fn.get-color("light");
+      background-color: fn.get-color('accent');
+      color: fn.get-color('light');
     }
   }
 }
@@ -63,9 +63,9 @@
 
   &:hover,
   &:focus {
-    background-color: fn.get-color("background-hover");
+    background-color: fn.get-color('background-hover');
     border-radius: 30px;
-    color: fn.get-color("accent");
+    color: fn.get-color('accent');
   }
 
   &.info {
@@ -75,17 +75,17 @@
 
     &.back {
       width: 200px;
-      border: 1px solid fn.get-color("accent");
+      border: 1px solid fn.get-color('accent');
       border-radius: 30px;
       margin-bottom: 30px;
 
-      @include mx.mq("md") {
+      @include mx.mq('md') {
         width: 300px;
       }
     }
   }
 
-  @include mx.mq("md") {
+  @include mx.mq('md') {
     width: calc((100% - 20px * 5) / 6);
   }
 }

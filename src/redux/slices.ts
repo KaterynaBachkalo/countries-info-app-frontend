@@ -1,8 +1,8 @@
-import { PayloadAction, createSlice, isAnyOf } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice, isAnyOf } from '@reduxjs/toolkit';
 
-import { toast } from "react-toastify";
-import { AvailableCountriesPayload, InfoPayload, IState } from "../types";
-import { fetchAvailableCountries, fetchCountryInfo } from "./operations";
+import { toast } from 'react-toastify';
+import { AvailableCountriesPayload, InfoPayload, IState } from '../types';
+import { fetchAvailableCountries, fetchCountryInfo } from './operations';
 
 export const handlePending = (state: IState): void => {
   state.isLoading = true;
@@ -11,21 +11,21 @@ export const handlePending = (state: IState): void => {
 
 export const handleRejected = (
   state: IState,
-  action: PayloadAction<unknown>
+  action: PayloadAction<unknown>,
 ): void => {
   state.isLoading = false;
   state.error = action.payload;
 
   if (state.error === 400) {
-    toast.error("Something went wrong...", {
-      position: "top-center",
+    toast.error('Something went wrong...', {
+      position: 'top-center',
       autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "colored",
+      theme: 'colored',
     });
   }
 };
@@ -41,7 +41,7 @@ const INITIAL_STATE = {
 };
 
 const countrySlice = createSlice({
-  name: "country",
+  name: 'country',
   initialState: INITIAL_STATE,
 
   reducers: {
@@ -62,7 +62,7 @@ const countrySlice = createSlice({
 
           state.isLoading = false;
           state.error = null;
-        }
+        },
       )
       .addCase(
         fetchCountryInfo.fulfilled,
@@ -73,16 +73,16 @@ const countrySlice = createSlice({
 
           state.isLoading = false;
           state.error = null;
-        }
+        },
       )
 
       .addMatcher(
         isAnyOf(fetchAvailableCountries.pending, fetchCountryInfo.pending),
-        handlePending
+        handlePending,
       )
       .addMatcher(
         isAnyOf(fetchAvailableCountries.rejected, fetchCountryInfo.rejected),
-        handleRejected
+        handleRejected,
       );
   },
 });

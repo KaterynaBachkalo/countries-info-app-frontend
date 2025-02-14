@@ -1,10 +1,10 @@
-@use "mixins" as mx;
-@use "variables" as var;
+@use 'mixins' as mx;
+@use 'variables' as var;
 
 %title {
   @include mx.font(28, 28, 0, 700);
 
-  @include mx.mq("md") {
+  @include mx.mq('md') {
     @include mx.font(54, 54, 0, 700);
   }
 }
@@ -17,7 +17,7 @@
     @include mx.font(20, 24, 0, 700);
   }
 
-  @include mx.mq("md") {
+  @include mx.mq('md') {
     @include mx.font(18, 22, 0, 500);
 
     &:hover,
@@ -35,7 +35,7 @@
     @include mx.font(14, 16, 0, 700);
   }
 
-  @include mx.mq("md") {
+  @include mx.mq('md') {
     @include mx.font(18, 22, 0, 700);
 
     &:hover,

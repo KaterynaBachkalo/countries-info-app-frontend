@@ -1,4 +1,4 @@
-import { IState } from "../types";
+import { IState } from '../types';
 
 export const selectAvailableCountries = (state: { country: IState }) =>
   state.country.availableCountries;

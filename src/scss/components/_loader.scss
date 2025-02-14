@@ -1,7 +1,7 @@
-@use "../utils/placeholders";
-@use "../utils/variables" as var;
-@use "../utils/functions" as fn;
-@use "../utils/mixins" as mx;
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
 
 .loader-backdrop {
   position: fixed;
@@ -11,7 +11,7 @@
   bottom: 0;
   overflow: auto;
 
-  background-color: fn.get-color("backdrop");
+  background-color: fn.get-color('backdrop');
   z-index: 200;
 }
 

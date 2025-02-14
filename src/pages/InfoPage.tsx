@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import {
   selectAvailableCountries,
   selectBorders,
@@ -6,16 +6,16 @@ import {
   selectIsLoading,
   selectParentBordersName,
   selectPopulation,
-} from "../redux/selectors";
-import { useEffect } from "react";
-import { AppDispatch } from "../redux/store";
-import { fetchCountryInfo } from "../redux/operations";
-import { Link, useParams } from "react-router-dom";
-import CountryChart from "../components/CountryChart";
-import Loader from "../components/Loader";
-import BorderWidget from "../components/BorderWidget";
-import BaseCountryInfo from "../components/BaseCountryInfo";
-import ErrorText from "../components/ErrorText";
+} from '../redux/selectors';
+import { useEffect } from 'react';
+import { AppDispatch } from '../redux/store';
+import { fetchCountryInfo } from '../redux/operations';
+import { Link, useParams } from 'react-router-dom';
+import CountryChart from '../components/CountryChart';
+import Loader from '../components/Loader';
+import BorderWidget from '../components/BorderWidget';
+import BaseCountryInfo from '../components/BaseCountryInfo';
+import ErrorText from '../components/ErrorText';
 
 const InfoPage = () => {
   const countries = useSelector(selectAvailableCountries);

@@ -1,5 +1,5 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { countryReducer } from "./slices";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { countryReducer } from './slices';
 
 const rootReducer = combineReducers({
   country: countryReducer,

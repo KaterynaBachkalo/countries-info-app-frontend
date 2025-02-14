@@ -1,11 +1,11 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import "./scss/index.scss";
+import { Navigate, Route, Routes } from 'react-router-dom';
+import './scss/index.scss';
 
-import { SharedLayout } from "./components/SharedLayout";
-import { lazy } from "react";
+import { SharedLayout } from './components/SharedLayout';
+import { lazy } from 'react';
 
-const CountryPage = lazy(() => import("./pages/CountryPage"));
-const InfoPage = lazy(() => import("./pages/InfoPage"));
+const CountryPage = lazy(() => import('./pages/CountryPage'));
+const InfoPage = lazy(() => import('./pages/InfoPage'));
 
 function App() {
   return (

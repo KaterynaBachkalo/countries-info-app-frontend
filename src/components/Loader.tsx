@@ -1,4 +1,4 @@
-import { ClipLoader } from "react-spinners";
+import { ClipLoader } from 'react-spinners';
 
 const Loader = () => {
   return (
@@ -10,10 +10,10 @@ const Loader = () => {
           size={100}
           aria-label="Loading Spinner"
           cssOverride={{
-            position: "absolute",
-            left: "50%",
-            top: "50%",
-            transform: "translate(-50%, -50%)",
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
           }}
         />
       </div>

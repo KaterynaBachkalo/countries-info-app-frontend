@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from 'react';
 import {
   Chart,
   CategoryScale,
@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
   LineController,
-} from "chart.js";
+} from 'chart.js';
 
 Chart.register(
   CategoryScale,
@@ -19,10 +19,10 @@ Chart.register(
   Title,
   Tooltip,
   Legend,
-  LineController
+  LineController,
 );
 
-import { ICountryChartProps } from "../types";
+import { ICountryChartProps } from '../types';
 
 const CountryChart: FC<ICountryChartProps> = ({ population }) => {
   const chartRef = useRef<HTMLCanvasElement | null>(null);
@@ -34,18 +34,18 @@ const CountryChart: FC<ICountryChartProps> = ({ population }) => {
     }
 
     if (chartRef.current) {
-      const ctx = chartRef.current.getContext("2d");
+      const ctx = chartRef.current.getContext('2d');
       if (ctx) {
         chartInstance.current = new Chart(ctx, {
-          type: "line",
+          type: 'line',
           data: {
             labels: population.map((pop) => pop.year),
             datasets: [
               {
-                label: "Population",
+                label: 'Population',
                 data: population.map((pop) => parseInt(pop.value)),
                 fill: false,
-                borderColor: "#ad7709",
+                borderColor: '#ad7709',
                 tension: 0.1,
               },
             ],
@@ -56,13 +56,13 @@ const CountryChart: FC<ICountryChartProps> = ({ population }) => {
               x: {
                 title: {
                   display: true,
-                  text: "Year",
+                  text: 'Year',
                 },
               },
               y: {
                 title: {
                   display: true,
-                  text: "Population",
+                  text: 'Population',
                 },
               },
             },

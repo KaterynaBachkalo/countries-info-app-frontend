@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Link } from "react-router-dom";
-import { IBorderCountry, IBordersProps } from "../types";
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
+import { IBorderCountry, IBordersProps } from '../types';
 
 const BorderWidget: FC<IBordersProps> = ({ borders }) => {
   return (

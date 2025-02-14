@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { IInfoProps } from "../types";
-import ErrorText from "./ErrorText";
+import { FC } from 'react';
+import { IInfoProps } from '../types';
+import ErrorText from './ErrorText';
 
 const BaseCountryInfo: FC<IInfoProps> = ({ flagUrl, title, countryCode }) => {
   return (

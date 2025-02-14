@@ -1,13 +1,13 @@
-import { Outlet } from "react-router-dom";
-import { Suspense, useEffect } from "react";
-import { ToastContainer } from "react-toastify";
+import { Outlet } from 'react-router-dom';
+import { Suspense, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 
-import Loader from "./Loader";
+import Loader from './Loader';
 
-import "react-toastify/dist/ReactToastify.css";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../redux/store";
-import { fetchAvailableCountries } from "../redux/operations";
+import 'react-toastify/dist/ReactToastify.css';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../redux/store';
+import { fetchAvailableCountries } from '../redux/operations';
 
 export const SharedLayout = () => {
   const dispatch = useDispatch<AppDispatch>();

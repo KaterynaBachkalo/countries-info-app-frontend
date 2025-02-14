@@ -1,28 +1,28 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios, { AxiosError } from "axios";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios, { AxiosError } from 'axios';
 
 export const countryInstance = axios.create({
-  baseURL: "http://localhost:5000/api/",
+  baseURL: 'http://localhost:5000/api/',
 });
 
 export const fetchAvailableCountries = createAsyncThunk(
-  "/countries/fetchAvailableCountries",
+  '/countries/fetchAvailableCountries',
   async (_, thunkAPI) => {
     try {
-      const response = await countryInstance.get("/countries");
+      const response = await countryInstance.get('/countries');
 
       return response.data;
     } catch (error: unknown) {
       if (error instanceof AxiosError && error.message) {
         return thunkAPI.rejectWithValue(error.message);
       }
-      return thunkAPI.rejectWithValue("An unknown error occurred");
+      return thunkAPI.rejectWithValue('An unknown error occurred');
     }
-  }
+  },
 );
 
 export const fetchCountryInfo = createAsyncThunk(
-  "/countries/fetchFlagUrl",
+  '/countries/fetchFlagUrl',
   async (code: string, thunkAPI) => {
     try {
       const response = await countryInstance.get(`/countries/${code}`);
@@ -32,7 +32,7 @@ export const fetchCountryInfo = createAsyncThunk(
       if (error instanceof AxiosError && error.message) {
         return thunkAPI.rejectWithValue(error.message);
       }
-      return thunkAPI.rejectWithValue("An unknown error occurred");
+      return thunkAPI.rejectWithValue('An unknown error occurred');
     }
-  }
+  },
 );

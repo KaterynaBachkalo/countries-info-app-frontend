@@ -1,5 +1,5 @@
-import { FC } from "react";
-import sprite from "../img/sprite.svg";
+import { FC } from 'react';
+import sprite from '../img/sprite.svg';
 
 interface IProps {
   className: string;
@@ -12,7 +12,7 @@ const Icon: FC<IProps> = ({
   name,
   width = 24,
   height = 24,
-  className = "",
+  className = '',
 }) => (
   <svg
     width={width}

@@ -1,7 +1,7 @@
-@use "../utils/placeholders";
-@use "../utils/variables" as var;
-@use "../utils/functions" as fn;
-@use "../utils/mixins" as mx;
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
 
 .info-header {
   display: flex;
@@ -18,7 +18,7 @@
   align-items: center;
   gap: 50px;
 
-  @include mx.mq("lg") {
+  @include mx.mq('lg') {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -30,10 +30,10 @@
 
   text-align: center;
 
-  @include mx.mq("md") {
+  @include mx.mq('md') {
     padding: 0;
   }
-  @include mx.mq("lg") {
+  @include mx.mq('lg') {
     padding: 0 32px 0 31px;
   }
 }

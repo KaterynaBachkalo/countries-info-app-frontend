@@ -1,9 +1,9 @@
-@use "sass:map";
-@use "sass:list";
-@use "sass:math";
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
 
-@use "variables" as var;
-@use "functions" as fn;
+@use 'variables' as var;
+@use 'functions' as fn;
 
 @mixin font($_fsz, $_lnh, $_ls, $_fw: 400) {
   font-size: #{$_fsz}px;

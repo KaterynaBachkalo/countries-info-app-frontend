@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-import { selectAvailableCountries, selectIsLoading } from "../redux/selectors";
-import Loader from "../components/Loader";
-import ErrorText from "../components/ErrorText";
+import { selectAvailableCountries, selectIsLoading } from '../redux/selectors';
+import Loader from '../components/Loader';
+import ErrorText from '../components/ErrorText';
 
 const CountryPage = () => {
   const countries = useSelector(selectAvailableCountries);
