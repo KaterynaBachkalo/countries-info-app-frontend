@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { selectAvailableCountries, selectIsLoading } from '../redux/selectors';
 import Loader from '../components/Loader';
 import ErrorText from '../components/ErrorText';
+import SwitchTheme from '../components/SwitchTheme';
 
 const CountryPage = () => {
   const countries = useSelector(selectAvailableCountries);
@@ -11,6 +12,7 @@ const CountryPage = () => {
 
   return (
     <section className="container">
+      <SwitchTheme />
       <h1 className="main-title">List of available countries</h1>
       {isLoading && <Loader />}
       {!isLoading && (
