@@ -16,6 +16,7 @@ import Loader from '../components/Loader';
 import BorderWidget from '../components/BorderWidget';
 import BaseCountryInfo from '../components/BaseCountryInfo';
 import ErrorText from '../components/ErrorText';
+import SwitchTheme from '../components/SwitchTheme';
 
 const InfoPage = () => {
   const countries = useSelector(selectAvailableCountries);
@@ -41,6 +42,8 @@ const InfoPage = () => {
 
   return (
     <section className="container">
+      <SwitchTheme />
+
       {isLoading && <Loader />}
 
       {!isLoading && (
