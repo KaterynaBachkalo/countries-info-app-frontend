@@ -12,6 +12,14 @@ body {
 
   background-color: fn.get-color('background-secondary');
   height: 100vh;
+
+  &.light {
+    background-color: fn.get-color('background-secondary');
+  }
+
+  &.dark {
+    background-color: fn.get-color('background-hover');
+  }
 }
 
 button {
