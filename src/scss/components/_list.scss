@@ -3,6 +3,29 @@
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
 
+.theme-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.theme {
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid fn.get-color('accent');
+  cursor: pointer;
+
+  &.light {
+    background-color: fn.get-color('background-secondary');
+  }
+
+  &.dark {
+    background-color: fn.get-color('accent');
+  }
+}
+
 .main-title {
   @extend %title;
 
